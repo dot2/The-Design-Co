@@ -8,7 +8,21 @@
 @import "checkout"
 @import "payment"
 @import "slider"
+@import "landing"
+@import "global"
+@import "how"
+@import "mobile-menu"
+@import "upload"
 
+html
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+
+.ng-scope
+  padding: 0
 
 *
   font:
@@ -18,22 +32,26 @@
 a
   color: $primary-color
 
-h2
-  font-size: 2em
-  font-family: $secondary-font
-  text-align: center
-
-h3
-  font-size: 1.5em
-  font-family: $secondary-font
-  margin-bottom: .5em
+// h2
+//   font-size: 2em
+//   font-family: $secondary-font
+//   text-align: center
+//
+// h3
+//   font-size: 1.5em
+//   font-family: $secondary-font
+//   margin-bottom: .5em
 
 button
-  background-color: $secondary-color
-  color: $bg-color
-  border: none
-  padding: 1em
+  background-color: $highlight !important
+  color: #fff
+  border-radius: 2px
+  padding: .2em 1.2em
   text-transform: uppercase
+  box-shadow: 0 0 5px $shadow
+  font:
+    family: $roboto
+    size: 1.1rem
 
   &:hover
     background-color: lighten($secondary-color, 10%)
@@ -42,8 +60,9 @@ figure
   margin: 0
 
 .container
-  max-width: 1000px
-  margin: 0 auto
+  width: 100%
+  margin: 0
+  padding: .8em
 
 .noProducts
   min-height: 50vh
@@ -55,12 +74,13 @@ figure
   color: $no-stock
 
 .message
-  color: $bg-color
+  margin: 1em 3em 0 3em
+  color: #fff
   display: inline-block
-  padding: 1em
+  padding: .2em 1.2em
 
 .neutral-message
-  background-color: $low-stock
+  background-color: $accent
 
 .succes-message
   background-color: $succes
@@ -120,8 +140,6 @@ table
 
 
 @media screen and (max-width: $breakpoint-very-large)
-  .container
-    width: 95%
 
 @media screen and (max-width: $breakpoint-large)
   *
@@ -144,7 +162,7 @@ table
     border: 1px solid $tertiary-color
 
   td
-    border-bottom: 1px solid $primary-color
+    border-bottom: 1px solid $accent
     position: relative
     padding-left: 50%
 
@@ -170,3 +188,118 @@ table
 
   td:nth-of-type(5):before
     content: 'Total Price'
+
+// STORE STYLES
+.collection-hero
+  margin-top: 1.87em !important
+  border-radius: 2px
+  box-shadow: 0 0 15px $shadow
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+  height: 45vh !important
+  background:
+    size: cover
+    repeat: no-repeat
+    position: center
+
+.collection-image
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+  height: 60% !important
+  border-radius: 10px 2px 0 0
+  background:
+    size: contain
+    repeat: no-repeat
+    position: top
+
+.hero
+  background-size: cover !important
+
+.collection-text
+  padding: .5em
+  h2
+    overflow: hidden
+    width: 100%
+    font:
+      family: $roboto
+      size: 1.2rem !important
+    p
+      font:
+        family: $opensans
+        size: 1rem
+        weight: 300
+
+.product-title
+  margin-top: 1.87em
+  h2
+    font-family: $roboto
+  span
+    text-align: center
+    color: $accent
+    font:
+      family: $opensans
+      size: 1rem
+
+.product-image
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+  height: 40vh
+  box-shadow: 0 0 10px $shadow
+  border-radius: 5px
+  background:
+    size: contain
+    repeat: no-repeat
+    position: center
+
+.sub-text
+  display: flex
+  flex-direction: row
+  position: relative
+
+.price
+  position: absolute
+  right: 10px
+  color: $accent !important
+  font:
+    size: 1rem
+    family: $lato !important
+    weight: bold !important
+
+.product-details
+  background-color: #fff
+  border-radius: 5px
+  padding: 0.1em
+  display: flex
+  flex-direction: column
+  align-items: left
+  h2
+    text-align: center
+    font:
+      family: $lato
+      size: 1.8rem
+span
+  align-items: center !important
+  width: 100%
+  text-align: center
+  color: $accent
+  margin-top: .2em
+  font:
+    family: $lato
+    size: 1.4rem
+    weight: 300
+
+.product-desc
+  margin-top: 1.87em
+  padding: 1em
+  font:
+    family: $opensans
+    size: 1rem
+  h3
+    margin: .2em 0
+    font:
+      family: $lato
+      size: 1.1rem
+      weight: bold

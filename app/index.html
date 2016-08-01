@@ -2,16 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="A Moltin Angular Webshop">
+    <title>The Design Co.</title>
+    <meta name="description" content="The Design co. ">
     <meta name="viewport" content="width=device-width">
     <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400|Roboto:300,400,700" rel="stylesheet">
+
+     <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.tmp) styles/vendor/normalize.css -->
-    <link rel="stylesheet" href="styles/vendor/normalize.css">
+        <!-- <link rel="stylesheet" href="styles/vendor/normalize.css"> -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/vendor/toast.css -->
     <link rel="stylesheet" href="styles/vendor/toast.css">
@@ -28,25 +41,38 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-
-
       <header class="mainHeader">
         <div class="container" ng-controller="NavCtrl">
-          <a ng-href="#/" class="logo">Gotham</a>
-          <a ng-href="" class="navToggle" ng-click="showNav = !showNav"><i class="fa fa-bars"></i></a>
-          <nav class="mainNav" ng-if="showNav">
-            <div class="categories">
-              <a ng-repeat="category in categories" ng-href="#/category/{{category.id}}">{{category.title}}</a>
-            </div>
+
+          <a ng-href="#/" class="logo align-center">
+              <img src="../images/logo.svg" alt="The Design Co." />
+              The Design Co.
+          </a>
+
+          <div class="nav align-hor">
+            <a ng-href="#/how"> <h2>How?</h2> </a>
+            <a ng-href="#/store"> <h2>Shop</h2> </a>
             <div class="cartCount">
-              <a href="#/cart"><i class="fa fa-shopping-cart"></i>{{cartTotal}} items</a>
+              <a ng-href="#/cart"><i class="fa fa-shopping-cart"></i>{{cartTotal}} items</a>
             </div>
-          </nav>
+          </div>
+
         </div>
       </header>
 
+      <!-- MOBILE NAV -->
+      <div class="mobile-nav">
+          <div class="link"> <a ng-href="#/store" target="_top">Store</a> </div>
+          <div class="link" style="border-left: solid; border-right: solid; border-width: thin; border-color: #AFBEC9">
+               <a ng-href="#/how" target="_top">How?</a>
+           </div>
+          <div class="cartCount link">
+            <a ng-href="#/cart" target="_top"><i class="fa fa-shopping-cart"></i>{{cartTotal}} items</a>
+          </div>
+      </div>
+
       <main class="mainContent">
-        <div ui-view="" class="container"></div>
+        <div ui-view="" class="" autoscroll="true"></div>
       </main>
 
       <footer class="mainFooter">

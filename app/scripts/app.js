@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('storeApp', [
     'ngAnimate',
@@ -26,8 +27,20 @@ angular
     .otherwise('/');
 
     $stateProvider
-      .state('store', {
+    .state('upload', {
+        url: '/upload',
+        templateUrl: 'views/upload.html',
+        controller: 'UploadCtrl',
+        controllerAs: 'upload'
+    })
+    .state('landing', {
         url: '/',
+        templateUrl: 'views/landing.html',
+        controller: 'LandingCtrl',
+        controllerAs: 'landing'
+    })
+      .state('store', {
+        url: '/store',
         templateUrl: 'views/store.html',
         controller: 'StoreCtrl',
         controllerAs: 'store',
@@ -242,5 +255,14 @@ angular
         templateUrl: 'views/complete.html',
         controller: 'CompleteCtrl',
         controllerAs: 'complete'
-      });
+    })
+      .state('how', {
+        url: '/how',
+        templateUrl: 'views/how.html',
+        controller: 'HowCtrl',
+        controllerAs: 'how'
+    });
+
+
+
   });

@@ -34,53 +34,65 @@
         &:hover
           text-decoration: underline
 
-  .basketArea
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
+.basketArea
+  margin-top: 1.87em
+  display: flex
+  flex-direction: row
+  justify-content: center
 
-  .addToBasket
-    background-color: $secondary-color
-    color: $bg-color
-    border: none
-    padding: 1em
-    text-transform: uppercase
+.addToBasket
+  background-color: $highlight
+  color: #fff
+  border: none
+  padding: .2em 1.2em
+  text-transform: uppercase
+  transition: all 0.2s ease-in-out
 
-    &:hover
-      background-color: lighten($secondary-color, 10%)
+  &:hover
+    background-color: darken($highlight, 5%)
+    box-shadow: 0 5px 15px $shadow
 
-  .quantity
-    padding: 0
-    margin-left: 1em
-    p
-      margin-top: 0
-      margin-bottom: 0.5em
-      font-weight: bold
+.quantity
+  padding: 0
+  margin-left: 1em
+  p
+    margin-top: 0
+    margin-bottom: 0.5em
+    font-weight: bold
 
-    input
-      padding: .5em
-      margin: 0
+input
+  border: none !important
+  border-radius: 5px !important
+  border-style: solid !important
+  border-color: $accent !important
+  border-width: thin
+  padding: .5em
+  margin: 0
+input:focus
+  outline-width: 0
+  border: 0
+  padding: 0
 
-  
-
-  @media screen and (max-width: $breakpoint-very-large)
-    .col--1-of-3, .col--2-of-3
-      width: 50%
-
-
-  @media screen and (max-width: $breakpoint-medium)
-    .col--1-of-3, .col--2-of-3
-      margin: 0 auto
-
-    .col--2-of-3
-      width: 80%
-
-  @media screen and (max-width: $breakpoint-small)
-    .col--2-of-3
-      .basketArea
-        flex-direction: column
-
-        .quantity
-          text-align: center
-          p
-            margin-top: 1em
+  // 
+  //
+  // @media screen and (max-width: $breakpoint-very-large)
+  //   .col--1-of-3, .col--2-of-3
+  //     width: 50%
+  //
+  //
+  // @media screen and (max-width: $breakpoint-medium)
+  //   .col--1-of-3, .col--2-of-3
+  //     margin: 0 auto
+  //
+  //   .col--2-of-3
+  //     width: 80%
+  //
+  // @media screen and (max-width: $breakpoint-small)
+  //   .col--2-of-3
+  //     .basketArea
+  //       flex-direction: column
+  //
+  //       .quantity
+  //         text-align: center
+  //         p
+  //           margin-top: 1em

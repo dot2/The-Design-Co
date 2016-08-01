@@ -1,6 +1,7 @@
 
 .cart
-  min-height: 40vh
+  margin-top: 1.87em
+  min-height: 50vh
 
   .deleteItem
     cursor: pointer
@@ -13,18 +14,20 @@
     font-weight: bold
 
 .checkoutButton
-  background-color: $secondary-color
+  background-color: $highlight
   border: none
   padding: 1em
   text-transform: uppercase
+  transition: all 0.2s ease-in-out
 
   a
     color: $bg-color
     text-decoration: none
 
   &:hover
-    background-color: lighten($secondary-color, 10%)
+    background-color: darken($highlight, 5%)
+    box-shadow: 0 5px 15px $shadow
 
-@media screen and (max-width: $breakpoint-medium)
-  .checkoutButton
-    width: 100%
+// @media screen and (max-width: $breakpoint-medium)
+//   .checkoutButton
+//     width: 100%

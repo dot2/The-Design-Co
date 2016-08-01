@@ -9,6 +9,7 @@
  */
 angular.module('storeApp')
   .controller('CheckoutCtrl', function ($scope, checkout, fields, $rootScope, $location, moltin, cart) {
+
     // Return cart
     $scope.car = cart;
     // Return all fields in an Address

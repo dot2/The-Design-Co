@@ -1,0 +1,39 @@
+
+
+.mobile-nav
+    position: fixed
+    height: 6vh
+    background-color: #fff
+    z-index: 999
+    bottom: 0
+    left: 0
+    right: 0
+    border-color: $accent
+    border-width: thin
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    box-shadow: 0 0px 5px $shadow
+    font:
+        size: 1rem
+        family: $lato
+        weight: 300
+    a
+        padding: 1em 2.2em
+
+.link
+    background-color: #fff
+    text-align: center
+    width: 100%
+    border-width: thin
+    border-color: $accent
+
+@media screen and (min-width: $breakpoint-medium )
+    .mobile-nav
+        display: none !important
+
+
+@media screen and (max-width: $breakpoint-small)
+    .cartCount
+        position: relative !important

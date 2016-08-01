@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="126px" height="100px" viewBox="0 0 126 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>credit card</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="credit-card" transform="translate(-12.000000, -25.000000)">
+            <g id="Group">
+                <polygon id="Shape" points="0 0 150 0 150 150 0 150"></polygon>
+                <path d="M125,25 L25,25 C18.0625,25 12.5625,30.5625 12.5625,37.5 L12.5,112.5 C12.5,119.4375 18.0625,125 25,125 L125,125 C131.9375,125 137.5,119.4375 137.5,112.5 L137.5,37.5 C137.5,30.5625 131.9375,25 125,25 L125,25 Z M125,112.5 L25,112.5 L25,75 L125,75 L125,112.5 L125,112.5 Z M125,50 L25,50 L25,37.5 L125,37.5 L125,50 L125,50 Z" id="Shape" fill="#FEBEBC"></path>
+                <text id="$$$" font-family="Roboto-Regular, Roboto" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="61" y="69">$$$</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

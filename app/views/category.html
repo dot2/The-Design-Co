@@ -1,6 +1,44 @@
-<h2>{{cat.title}}</h2>
+<div class="container wrapper">
+    <div class="page-title">
+        <h2>{{cat.title}}</h2>
+        <hr width="150px" />
+    </div>
 
-<div class="row">
-    <product ng-repeat="product in products" class="col col--1-of-4"></product>
-    <p class="noProducts" ng-if="products.length == 0">Sorry, no products available!</p>
+    <div class="collection-hero" style="background-image: url('{{cat.images[0].url.https}}')">
+    Collection
+    </div>
+
+    <div class="page-title product-title">
+        <h2>Products</h2>
+        <span>Don't forget we will coordinate all the purchasing for you!</span>
+    </div>
+
+    <div class="row">
+        <!-- <product ng-repeat="product in products" class="col col--1-of-4"></product> -->
+        <div class="col-md-4" ng-repeat="product in products">
+            <div class="collection-card">
+                <!-- CARD IMAGE -->
+                <div class="collection-image" style="background-image: url('{{product.images[0].url.https}}')">image</div>
+
+                <!-- CARD TEXT  -->
+                <div class="collection-text">
+                    <h2>{{product.title}}</h2>
+                    <div class="sub-text">
+                        <p>{{product.brand.value}}</p>
+                        <p class="price">{{product.price.value}}</p>
+                    </div>
+
+                </div>
+                <!-- CARD BTN -->
+                <a ng-href="#/product/{{product.id}}">
+                    <div class="btn">
+                        View
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <p class="noProducts" ng-if="products.length == 0">Sorry, no products available!</p>
+    </div>
 </div>

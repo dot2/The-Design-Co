@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="54px" viewBox="0 0 68 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>credit card</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="credit-card" transform="translate(-6.000000, -13.000000)">
+            <g id="Group">
+                <polygon id="Shape" points="0 0 80 0 80 80 0 80"></polygon>
+                <path d="M66.6666667,13.3333333 L13.3333333,13.3333333 C9.63333333,13.3333333 6.7,16.3 6.7,20 L6.66666667,60 C6.66666667,63.7 9.63333333,66.6666667 13.3333333,66.6666667 L66.6666667,66.6666667 C70.3666667,66.6666667 73.3333333,63.7 73.3333333,60 L73.3333333,20 C73.3333333,16.3 70.3666667,13.3333333 66.6666667,13.3333333 L66.6666667,13.3333333 Z M66.6666667,60 L13.3333333,60 L13.3333333,40 L66.6666667,40 L66.6666667,60 L66.6666667,60 Z M66.6666667,26.6666667 L13.3333333,26.6666667 L13.3333333,20 L66.6666667,20 L66.6666667,26.6666667 L66.6666667,26.6666667 Z" id="Shape" fill="#AFBECA"></path>
+            </g>
+        </g>
+    </g>
+</svg>

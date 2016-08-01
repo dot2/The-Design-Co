@@ -1,28 +1,51 @@
 
-<div class="jumbo">
-  <div class="jumbo-text">
-    <span>25% off</span>
-    Everything
+<div class="container wrapper">
+    <div class="page-title">
+        <h2>Shop our collections</h2>
+        <hr width="150px" />
+    </div>
 
-  </div>
-</div>
+    <!-- <div class="categories row">
+         <div ng-repeat="collection in collections" class="col col--1-of-5">
+           <a ng-href="#/category/{{colletion.id}}">{{collection.title}}</a>
+         </div>
+      <div ng-repeat="category in categories" class="col col--1-of-5">
+        <a ng-href="#/category/{{category.id}}">{{category.title}}</a>
+      </div>
+    </div> -->
+    <div class="container wrapper">
+        <div class="row">
+            <div class="col-md-4" ng-repeat="category in categories">
+                <div class="collection-card">
+                    <!-- CARD IMAGE -->
+                    <div class="collection-image hero" style="background-image: url('{{category.images[0].url.https}}')">image</div>
+                    <!-- CARD TEXT  -->
+                    <div class="collection-text">
+                        <h2>{{category.title}}</h2>
+                        <p>{{category.description}}</p>
+                    </div>
+                    <!-- CARD BTN -->
+                    <a ng-href="#/category/{{category.id}}">
+                        <div class="btn">
+                            Take a look
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="categories row">
-  <div ng-repeat="category in categories" class="col col--1-of-5">
-    <a ng-href="#/category/{{category.id}}">{{category.title}}</a>
-  </div>
-</div>
 
 
+    <!-- <h2>Featured</h2>
+    <div class="featured row">
+        <product ng-repeat="product in allProducts" ng-if="product.collection.value == 'Featured'" class="col col--1-of-4"></product>
+    </div>
 
-<h2>Featured</h2>
-<div class="featured row">
-    <product ng-repeat="product in allProducts" ng-if="product.collection.value == 'Featured'" class="col col--1-of-4"></product>
-</div>
-
-<h2>Selected Brands</h2>
-<div class="brands row">
-  <figure ng-repeat="brand in brands" ng-if="brand.images.length > 0" class="col col--1-of-3">
-    <a ng-href="#/brand/{{brand.id}}"><img src="{{brand.images[0].url.https}}" alt="{{brand.title}}"></a>
-  </figure>
+    <h2>Selected Brands</h2>
+    <div class="brands row">
+      <figure ng-repeat="brand in brands" ng-if="brand.images.length > 0" class="col col--1-of-3">
+        <a ng-href="#/brand/{{brand.id}}"><img src="{{brand.images[0].url.https}}" alt="{{brand.title}}"></a>
+      </figure>
+    </div> -->
 </div>

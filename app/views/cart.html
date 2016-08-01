@@ -1,31 +1,36 @@
-<h2>Cart</h2>
+<div class="container wrapper">
+    <div class="page-title">
+        <h2>Cart</h2>
+        <hr width="150px" />
+    </div>
 
-<div class="cart">
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Product Name</th>
-        <th>Quantity</th>
-        <th>Price pr. item</th>
-        <th>Total Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="item in car.contents">
-        <td><i ng-click="deleteItem(item.id)" class="fa fa-times deleteItem"></i></td>
-        <td><a ng-href="#/product/{{item.id}}">{{item.name}}</a></td>
-        <td><input type="number" ng-model="item.quantity" ng-change="updateItem(item.id, item.quantity)"></td>
-        <td>£{{item.price}}</td>
-        <td>{{item.totals.pre_discount.formatted.with_tax}}</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="cart">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price pr. item</th>
+            <th>Total Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in car.contents">
+            <td><i ng-click="deleteItem(item.id)" class="fa fa-times deleteItem"></i></td>
+            <td><a ng-href="#/product/{{item.id}}">{{item.name}}</a></td>
+            <td><input type="number" ng-model="item.quantity" ng-change="updateItem(item.id, item.quantity)"></td>
+            <td>${{item.price}}</td>
+            <td>{{item.totals.pre_discount.formatted.with_tax}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="cartTotal">
+      <p>{{car.total_items}} items in the cart</p>
+      <p>Total Price: {{car.totals.pre_discount.formatted.with_tax }}</p>
+    </div>
+    <button class="checkoutButton"><a ng-href="#/checkout">Proceed To Checkout</a></button>
 </div>
-
-
-<div class="cartTotal">
-  <p>{{car.total_items}} items in the cart</p>
-  <p>Total Price: {{car.totals.pre_discount.formatted.with_tax}}</p>
-</div>
-<button class="checkoutButton"><a ng-href="#/checkout">Proceed To Checkout</a></button>

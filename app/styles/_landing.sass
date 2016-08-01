@@ -1,0 +1,214 @@
+.hero-image
+    height: 65vh
+    background:
+        image: url('../images/hero-image.png')
+        size: cover
+        position: center
+    .hero-text
+        flex-direction: column
+        height: 60%
+        padding-top: 4em
+        h2
+            padding: 0
+            margin: 0
+            text-align: center
+            font:
+                family: $lato
+                size: 2.8rem
+                weight: bold
+            color: #fff
+        span
+            font:
+                family: $opensans
+                size: 1.5rem
+                weight: 300
+            text-transform: uppercase
+            color: #fff
+        p
+            font:
+                family: $opensans
+                size: 1.2rem
+            color: #fff
+            margin-top: 10px
+        .btn-wrapper
+            margin-top: 1em
+.step
+    position: relative
+    height: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 3em 0 !important
+    border:
+        bottom: solid
+        width: thin
+        color: $accent
+    .step-title
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        h2
+            text-align: center
+            font:
+                size: 1.8rem
+                family: $roboto
+        span
+            width: 100%
+            text-align: center
+            color: $accent
+            font:
+                size: .8rem
+                family: $lato
+                weight: 300
+        h3
+            text-align: center
+            font:
+                size: 1rem
+                family: $opensans
+                weight: 300
+            color: $main
+    .step-img
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 1.5em
+        img
+            width: 65%
+.pricing-wrapper
+    width: 100%
+    background:
+        image: url('../images/pricing-bkg.png')
+        size: cover
+        position: center
+    height: 50vh
+    display: flex
+    justify-content: center
+    align-items: center
+    .packages
+        padding: 1em
+        padding-bottom: 3em
+        width: 650px
+        background-color: rgba(255,255,255, 0.95)
+        border-radius: 1.5px
+        .title
+            display: flex
+            flex-direction: column
+            align-items: center
+            h2
+                text-align: center
+                font:
+                    family: $lato
+                    size: 2rem
+                padding: 0
+        .text
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin-top: 1em
+            text-align: center
+        .text h3
+            font:
+                family: $opensans
+                size: 1.2rem
+        .text p
+            margin-top: 1.8em
+            text-align: center
+            max-width: 380px
+            font:
+                family: $opensans
+                size: 1rem
+                weight: 300
+        .btn-wrapper
+            margin-top: 1.8em
+            .btn
+                width: 150px
+.works-wrapper
+    background:
+        image: url('../images/marble-bkg.png')
+        size: cover
+        position: center
+    height: auo
+    padding: 1em
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    .works
+        width: 65%
+        h2
+            text-align: center
+            font:
+                family: $lato
+                size: 2rem
+        p
+            text-align: center
+            font:
+                family: $lato
+                size: 1.8rem
+                weight: 300
+        .works-icons
+            margin-top: 2em
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-around
+            .icon-text
+                margin-top: 1.2em
+                h3
+                    text-align: center
+                    font:
+                        family: $opensans
+                        size: 1.3rem
+                p
+                    margin-top: .35em
+                    width: 200px
+                    font:
+                        family: $opensans
+                        size: 1rem
+                        weight: 300
+#stuff, #wallet, #store
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+@media screen and (max-width: $breakpoint-small)
+    .mainFooter
+        margin-bottom: 5vh !important
+        
+    .step-title h2
+        font-size: 1.5rem !important
+
+    .works
+        margin: .5em
+        h2
+            font-size: 1.5rem !important
+        p
+            font-size: 1.1rem !important
+        h3
+            font-size: 1.2rem !important
+
+    .works-icons
+        flex-direction: column !important
+        height: auto !important
+        img
+            width: 50px !important
+
+    #wallet, #store
+        margin: .8em 0
+
+    .icon-text
+        p
+            font-size: 1rem !important
+
+    .packages
+        .title h2
+            font-size: 1.5rem !important
+        .text
+            h3
+                font-size: 1.1rem !important
+            p
+                font-size: 1rem !important

@@ -1,5 +1,60 @@
+<div class="container wrapper">
 
-<h2>{{prod.title}}</h2>
+    <div class="page-title">
+        <h2>{{prod.title}}</h2>
+        <hr width="150px" />
+        <a ng-href="#/category/{{category.id}}">
+            <div class="back btn">
+                <img src="../images/icons/back-arrow.svg" /> Back
+            </div>
+        </a>
+    </div>
+
+    <div class="container wrapper">
+        <div class="row margin-top">
+
+            <div class="col-md-7">
+                    <div class="product-images">
+                        <div class="product-image" style="background-image: url('{{prod.images[0].url.https}}')">
+                            image
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="product-details">
+                    <h2>Product Price</h2>
+                    <span>{{prod.price.value}}</span>
+
+                    <div class="basketArea">
+                        <button class="addToBasket" ng-if="!addStatus" ng-click="addCart()">Add To Basket</button>
+                        <button class="addToBasket" ng-if="addStatus">{{addStatus}}</button>
+                        <div class="quantity">
+                            <p>Quantity:</p>
+                            <input type="number" class="quantity" ng-model="quantity" min="1">
+                        </div>
+                    </div>
+                    <p class="message neutral-message" ng-if="message">{{message}}</p>
+
+                    <div class="product-desc">
+                        <h3>Product Description</h3>
+                        <p>{{prod.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- <h2>{{prod.title}}</h2>
 <div class="product row">
   <figure ng-repeat="img in prodImgs" class="col col--1-of-3">
     <img src="{{img.url.https}}" alt="{{prod.slug}}">
@@ -14,14 +69,5 @@
     <h4>Description</h4>
     <p class="description">{{prod.description}}</p>
     <p class="brand">Brand: <a ng-href="#/brand/{{prod.brand.data.id}}">{{prod.brand.value}}</a></p>
-    <div class="basketArea">
-      <button class="addToBasket" ng-if="!addStatus" ng-click="addCart()">Add To Basket</button>
-      <button class="addToBasket" ng-if="addStatus">{{addStatus}}</button>
-      <div class="quantity">
-        <p>Quantity:</p>
-        <input type="number" class="quantity" ng-model="quantity" min="1">
-      </div>
-    </div>
-    <p class="message neutral-message" ng-if="message">{{message}}</p>
   </div>
-</div>
+</div>  -->

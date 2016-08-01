@@ -1,21 +1,26 @@
 
 .mainHeader
   width: 100%
-  border-bottom: 1px solid $tertiary-color
-  margin-bottom: 1.25em
+  box-shadow: 0 0 10px $shadow
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  position: relative
 
   .container
     display: flex
     padding: 0.5em
-
     align-items: center
-    justify-content: space-between
 
   .logo
     font:
       family: $logo
       size: 3em
     text-decoration: none
+    margin-right: 1.2em
+    img
+      width: 50px
 
   .navToggle
     display: none
@@ -28,6 +33,16 @@
       text-decoration: none
       text-transform: uppercase
 
+  .nav
+    h2
+      font:
+        family: $opensans
+        size: 1.2rem
+        weight: 300
+        color: $main
+    a
+      margin: 0 1.2em 0 0
+
     .categories
       display: inline-block
 
@@ -37,15 +52,29 @@
           text-decoration: underline
 
     .cartCount
+      position: absolute
+      right: 1em
+      top: 1.5em
       margin-left: 2em
-      padding-left: 2em
-      border-left: 1px solid $primary-color
+      padding-left: 1em
+      border-left: 1px solid $accent
 
       a
         &:hover
           color: $secondary-color
       i
         margin-right: .5em
+
+.navbar-default
+  background-color: #fff !important
+  border: none !important
+  width: 100%
+
+.navbar
+  margin-bottom: 0 !important
+
+.navbar-brand
+  color: $main !important
 
   @media screen and (max-width: $breakpoint-large)
 
@@ -90,6 +119,11 @@
         padding-left: 0
         border: none
 
-  @media screen and (max-width: $breakpoint-small)
-    .mainNav
-      width: 100%
+@media screen and (max-width: $breakpoint-small)
+  .nav
+    display: none !important
+
+  .logo
+    font-size: 1.5rem !important
+    width: 100%
+    align-items: center
