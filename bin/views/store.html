@@ -16,21 +16,23 @@
     <div class="container wrapper">
         <div class="row">
             <div class="col-md-4" ng-repeat="category in categories">
-                <div class="collection-card">
-                    <!-- CARD IMAGE -->
-                    <div class="collection-image hero" style="background-image: url('{{category.images[0].url.https}}')">image</div>
-                    <!-- CARD TEXT  -->
-                    <div class="collection-text">
-                        <h2>{{category.title}}</h2>
-                        <p>{{category.description}}</p>
-                    </div>
-                    <!-- CARD BTN -->
-                    <a ng-href="#/category/{{category.id}}">
-                        <div class="btn">
-                            Take a look
+                <a ng-href="#/category/{{category.id}}">
+                    <div class="collection-card">
+                        <!-- CARD IMAGE -->
+                        <div class="collection-image hero" style="background-image: url('{{category.images[0].url.https}}')">image</div>
+                        <!-- CARD TEXT  -->
+                        <div class="collection-text">
+                            <h2>{{category.title}}</h2>
+                            <p>{{category.description}}</p>
                         </div>
-                    </a>
-                </div>
+                        <!-- CARD BTN -->
+                        <a ng-href="#/category/{{category.id}}">
+                            <div class="btn">
+                                Take a look
+                            </div>
+                        </a>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
