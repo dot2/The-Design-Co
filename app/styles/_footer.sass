@@ -6,8 +6,17 @@
 
   .container
     display: flex
-    flex-direction: row
-    justify-content: space-around
+    flex-direction: column
+    align-items: center
+    justy-content: center
+
+    .logo
+      font-size: 2rem !important
+
+    .social-links
+      font-size: 2rem
+      i
+        padding: 1em
 
     ul
       padding: 0
@@ -21,3 +30,15 @@
 
           &:hover
             color: $secondary-color
+
+@media screen and (max-width: $breakpoint-small)
+  .mainFooter
+    .container
+      .logo
+        font-size: 1.2rem !important
+        img
+          display: none !important
+      .social-links
+        font-size: 1.5rem !important
+        i
+          padding: .5em !important
